@@ -1,0 +1,5 @@
+.testtext {
+ position: absolute; top: 50%;
+ text-align: center; font-size: 300px;
+ text-shadow: orange 0 10px 10px, blue 0 -10px 10px;
+}
