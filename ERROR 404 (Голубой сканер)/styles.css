@@ -1,0 +1,26 @@
+body {
+ background: #181828;
+ overflow: hidden;
+ margin: 0;
+ user-select: none;
+}
+
+.Activator {
+ position: absolute; left: -325px;
+ Height: 100%; Width: 0;
+ color: #181828;
+ background: #77d9cd;
+ box-shadow: 0 0 150px 75px #77d9cd;
+ animation: Movement 10s infinite linear;
+ 
+}
+
+.TestText {
+ position: fixed; top: 45%; left: 40%;
+ Font-size: 100px;
+}
+
+@keyframes Movement {
+  0% {left: -325px;}
+  100% {left: 120%;}
+}
