@@ -1,0 +1,42 @@
+body {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 1s;
+}
+
+.Container {
+ position: absolute; top: 45%;
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+}
+
+.EntryField {
+ height: auto; width: auto;
+ font-size: 1.5em;
+ border: 2px solid black;
+ border-radius: 1.5em;
+ padding: 0.2em 0.5em 0.2em 0.5em;
+ outline: none;
+ box-shadow: inset 0 0 10px black;
+}
+
+.RandomColor {
+ width: auto;
+ font-size: 1.5em;
+ text-align: center; line-height: 0.6em;
+ border: 2px solid black;
+ border-radius: 50%;
+ padding: 0.5em;
+ margin-left: 1em;
+}
+
+.RandomColor {
+ background: #fcfcfc;
+ box-shadow: inset 0 0 10px black;
+}
+
+.RandomColor:hover {
+ cursor: pointer;
+}
