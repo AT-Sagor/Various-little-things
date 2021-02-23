@@ -5,13 +5,20 @@
   <link href="styles.css" rel="stylesheet">
  </head>
  <body>
- <div class="Container">
+<div class="Container">
  <input class="EntryField" type="text" placeholder="Введите код цвета." oninput="fColorСhange()"></input>
  <div class="RandomColor" title="Сгенерировать случайный цвет.">R</div>
  <div class="MemoryColor">
-  <div class="AddColor" id="AddColor_1" onclick="fColorMemory(1)" title="Левый клик мышкой: добавить цвет в избранное. CTRL + Левый клик мышкой: сделать избранный цвет фоном. ALT + Левый клик мышкой: очичтить фон."><b>+</b></div>
-  <div class="AddColor" id="AddColor_2" onclick="fColorMemory(2)" title="Левый клик мышкой: добавить цвет в избранное. CTRL + Левый клик мышкой: сделать избранный цвет фоном. ALT + Левый клик мышкой: очичтить фон."><b>+</b></div>
-  <div class="AddColor" id="AddColor_3" onclick="fColorMemory(3)" title="Левый клик мышкой: добавить цвет в избранное. CTRL + Левый клик мышкой: сделать избранный цвет фоном. ALT + Левый клик мышкой: очичтить фон."><b>+</b></div>
+  <div class="AddColor" id="AddColor_1" onclick="fColorMemory(1)"><b>+</b></div>
+  <div class="AddColor" id="AddColor_2" onclick="fColorMemory(2)"><b>+</b></div>
+  <div class="AddColor" id="AddColor_3" onclick="fColorMemory(3)"><b>+</b></div>
+ </div>
+
+ <div class="TitleMemoryColor"><b>
+  <p>ЛКМ: добавить цвет в избранное.</p>
+  <p>Повторное нажатие ЛКМ: задать цвет body и узнать код цвета.</p>
+  <p>CTRL + ЛКМ: сделать избранный цвет фоном.</p>
+  <p>ALT + ЛКМ: очичтить фон.</p></b>
  </div>
 </div>
 
