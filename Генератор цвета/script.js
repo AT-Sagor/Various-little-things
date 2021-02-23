@@ -3,10 +3,7 @@ var iStart = 0;
 var oEntryField = document.getElementsByClassName("EntryField")[0];
 var oRandomColor = document.getElementsByClassName("RandomColor")[0];
 var oMemoryColor = document.getElementsByClassName("MemoryColor")[0];
-var oAddColor1 = document.getElementById("AddColor_1");
-var oAddColor2 = document.getElementById("AddColor_2");
-var oAddColor3 = document.getElementById("AddColor_3");
-var iMemoryColor1, iMemoryColor2, iMemoryColor3;
+var oAddColor, iMemoryColor;
 
 function fRandomColor () {
  let iRandomColorR = Math.round(Math.random()*255).toString(16);
@@ -54,85 +51,33 @@ oRandomColor.addEventListener('click', function() {
 )
 
 function fColorMemory(AddColor) {
-  if (event.altKey) {
-   oMemoryColor.style.background = "none";
-   return;
-  } 
+ if (AddColor == 1) { oAddColor = document.getElementById("AddColor_1"); }
+ if (AddColor == 2) { oAddColor = document.getElementById("AddColor_2"); }
+ if (AddColor == 3) { oAddColor = document.getElementById("AddColor_3"); }
   
- if (AddColor == 1) {
-  if (event.ctrlKey) {
-   oMemoryColor.style.background = oAddColor1.style.background;
-   return;
-  }
-   
-  if (iMemoryColor1 == 1) {
-   document.body.style.background = oEntryField.value = oAddColor1.style.background;
-   oAddColor1.innerHTML = '<b>+</b>';
-   oAddColor1.style.background = "transparent";
-   
-   iMemoryColor1--;
-   return;
-  }
-   
-  if (oEntryField.value == 0) {
-   oAddColor1.style.background = iStartColor;
-  }
-  
-  else {oAddColor1.style.background = oEntryField.value;}
-   
-  oAddColor1.innerHTML = '&#8635;';
-  iMemoryColor1 = 1;
- }
-
- if (AddColor == 2) {
-   
-  if (event.ctrlKey) {
-   oMemoryColor.style.background = oAddColor2.style.background;
-   return;
-  }
-  
-  if (iMemoryColor2 == 1) {
-   document.body.style.background = oEntryField.value = oAddColor2.style.background;
-   oAddColor2.innerHTML = '<b>+</b>';
-   oAddColor2.style.background = "transparent";
-   
-   iMemoryColor2--;
-   return;
-  }
-  
-  if (oEntryField.value == 0) {
-   oAddColor2.style.background = iStartColor;
-  }
-  
-  else {oAddColor2.style.background = oEntryField.value;}
-  
-  oAddColor2.innerHTML = '&#8635;';
-  iMemoryColor2 = 1;
+ if (event.ctrlKey) {
+  oMemoryColor.style.background = oAddColor.style.background;
+  return;
  }
   
- if (AddColor == 3) {
-   
-  if (event.ctrlKey) {
-   oMemoryColor.style.background = oAddColor3.style.background;
-   return;
-  }
-   
-  if (iMemoryColor3 == 1) {
-   document.body.style.background = oEntryField.value = oAddColor3.style.background;
-   oAddColor3.innerHTML = '<b>+</b>';
-   oAddColor3.style.background = "transparent";
-   
-   iMemoryColor3--;
-   return;
-  }
-  
-  if (oEntryField.value == 0) {
-   oAddColor3.style.background = iStartColor;
-  }
-  
-  else {oAddColor3.style.background = oEntryField.value;}
-  
-  oAddColor3.innerHTML = '&#8635;';
-  iMemoryColor3 = 1;
+ if (event.altKey) {
+  oMemoryColor.style.background = "none";
+  return;
  }
+ 
+ if (oAddColor.value == 1) {
+  document.body.style.background = oEntryField.value = oAddColor.style.background;
+  oAddColor.style.background = 'none';
+  oAddColor.innerHTML = '<b>+</b>';
+  oAddColor.value = 0;
+  return;
+ }
+ 
+ if (oEntryField.value == 0) {
+  oEntryField.value = iStartColor;
+ }
+ 
+ oAddColor.style.background = oEntryField.value;
+ oAddColor.innerHTML = '&#8635;';
+ oAddColor.value = 1;
 }
