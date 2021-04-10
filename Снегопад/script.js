@@ -10,7 +10,7 @@ function fSnowCreate() {
  for (iIdSnow = 1; iIdSnow <= iValue; iIdSnow++) {
   iLeftRandom = Math.round(Math.random()*windowWidth);
   iTopRandom = -Math.round(Math.random()*(1000)+25);
-  iSize = Math.round(Math.random()*10);
+  iSize = Math.round(Math.random()*(10-1)+1);
   iPosition[iNum] = iTopRandom;
   tSnow = '<div class="SnowBlock" id="Block_'+iIdSnow+'" style="left: '+iLeftRandom+'px; top: '+iTopRandom+'px; height: '+iSize+'px; width: '+iSize+'px;"></div>';
   oContainer.insertAdjacentHTML('beforeend', tSnow);
@@ -19,7 +19,7 @@ function fSnowCreate() {
  }
 }
 
-function fAnimationSnow() {ф
+function fAnimationSnow() {
  for(iNum = 0; iNum < iValue; iNum++) {
   oSnow[iNum].style.top = iPosition[iNum]+'px';
   iSpeed = parseInt(oSnow[iNum].style.height);
