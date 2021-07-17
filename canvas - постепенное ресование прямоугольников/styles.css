@@ -1,4 +1,7 @@
-html, body {margin: 0;}
+html, body {
+ overflow: hidden;
+ margin: 0;
+}
 
 .testtext {
  position: absolute; top: 50%;
