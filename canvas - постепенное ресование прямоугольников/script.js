@@ -1,5 +1,5 @@
-var windowHeight = window.innerHeight - 20;
-var windowWidth = window.innerWidth - 20;
+var windowHeight = window.innerHeight;
+var windowWidth = window.innerWidth;
 var iCanvas = 0;
 
 document.body.innerHTML += '<canvas class="smile" width="'+windowWidth+'" height="'+windowHeight+'"></canvas>';
