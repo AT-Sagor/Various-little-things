@@ -1,0 +1,76 @@
+body {
+ height: 100%;
+ margin: 0;
+ background: black;
+}
+
+li {
+ display: block;
+ position: relative;
+ padding: 5px 0 5px 0;
+}
+
+.HeaderLeft_Container {
+ display: block;
+ position: absolute;
+ border-left: 2px solid black;
+ height: auto; min-height: 100%;
+ width: 300px;
+ background: #87b0ad;
+}
+
+.HeaderLeft_Category {
+ display: inline-block;
+ position: relative;
+ margin-top: 3px;
+ height: 1.9em; width: 100%;
+ background: #87b0ad;
+ font-size: 1.3em;
+ font-weight: bold;
+ line-height: 2.0em;
+ text-indent: 0.5em;
+ transition: 0.5s;
+}
+
+#HeaderLeft_Category_1 {
+ margin-top: 0;
+}
+
+.HeaderLeft_Category:hover {
+ background: black;
+ color: white;
+ transition: 0.5s;
+}
+
+.HeaderLeft_Category_List {
+ color: black;
+ font-size: 0.9em;
+ line-height: 1em;
+ list-style: none;
+}
+
+.HeaderLeft_Category input, .HeaderLeft_Category div  { 
+ display: none;
+}
+
+.HeaderLeft_Category :checked ~ label {
+ background: black;
+ color: white; 
+ transition: 0.5s;
+}
+
+.HeaderLeft_Category :checked ~ div {
+ display: block;
+ transition: 0.5s;
+}
+
+label {
+ display: block;
+ cursor: pointer;
+ transition: 0.5s;
+}
+
+.HeaderLeft_Category_List_Paragraph:hover {
+ background: rgba(255, 165, 0, 0.5);
+ transition: 0.5s;
+}
