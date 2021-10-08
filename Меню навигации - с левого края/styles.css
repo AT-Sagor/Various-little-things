@@ -29,7 +29,6 @@ li {
  font-weight: bold;
  line-height: 2.0em;
  text-indent: 0.5em;
- transition: 0.5s;
 }
 
 #HeaderLeft_Category_1 {
@@ -39,7 +38,6 @@ li {
 .HeaderLeft_Category:hover {
  background: black;
  color: white;
- transition: 0.5s;
 }
 
 .HeaderLeft_Category_List {
