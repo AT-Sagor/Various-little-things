@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="utf-8">
+   <title>Игра в кубики</title>
+   <link href="styles.css" rel="stylesheet">
+ </head>
+  <body>
+	
+<div class="Player" id="IDPlayer_1">
+  <div class="PlayerName">Игрок #1</div>
+  <div class="TotalScore" id="IDTotalScore_1">Счёт: 0</div>
+  <div class="Cube" id="IDCube_1"></div>
+  <div class="AdditionalPanel">
+    <div class="Start" id="IDStart">Начать</div>
+  </div>
+</div>
+
+<div class="MotherContainer">
+  <div class="PlayingField">
+    <div class="Column" id="IDColumn_1">
+      <div class="CubeField" id="IDCubeField_1" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_2" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_3" data-value="0"></div>
+    </div>
+    <div class="Column" id="IDColumn_2">
+      <div class="CubeField" id="IDCubeField_4" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_5" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_6" data-value="0"></div>
+    </div>
+    <div class="Column" id="IDColumn_3">
+      <div class="CubeField" id="IDCubeField_7" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_8" data-value="0"></div>
+      <div class="CubeField" id="IDCubeField_9" data-value="0"></div>
+    </div>
+  </div>
+  <div class="PointsField">
+    <div class="ScoreField">
+      <div class="ScoreColumnField" id="IDScoreColumnField_1">0</div>
+      <div class="ScoreColumnField" id="IDScoreColumnField_2">0</div>
+      <div class="ScoreColumnField" id="IDScoreColumnField_3">0</div>
+    </div>
+    <div class="ScoreField">
+      <div class="ScoreColumnField" id="IDScoreColumnField_4">0</div>
+      <div class="ScoreColumnField" id="IDScoreColumnField_5">0</div>
+      <div class="ScoreColumnField" id="IDScoreColumnField_6">0</div>
+    </div>
+  </div>
+    <div class="PlayingField">
+      <div class="Column" id="IDColumn_4">
+        <div class="CubeField" id="IDCubeField_10" data-value="0" data-move="0"></div>
+        <div class="CubeField" id="IDCubeField_11" data-value="0" data-move="0"></div>
+        <div class="CubeField" id="IDCubeField_12" data-value="0" data-move="0"></div>
+      </div>
+     <div class="Column" id="IDColumn_5">
+       <div class="CubeField" id="IDCubeField_13" data-value="0" data-move="0"></div>
+       <div class="CubeField" id="IDCubeField_14" data-value="0" data-move="0"></div>
+       <div class="CubeField" id="IDCubeField_15" data-value="0" data-move="0"></div>
+     </div>
+     <div class="Column" id="IDColumn_6">
+       <div class="CubeField" id="IDCubeField_16" data-value="0" data-move="0"></div>
+       <div class="CubeField" id="IDCubeField_17" data-value="0" data-move="0"></div>
+       <div class="CubeField" id="IDCubeField_18" data-value="0" data-move="0"></div>
+     </div>
+   </div>
+</div>
+
+<div class="Player Two" id="IDPlayer_2">
+  <div class="AdditionalPanel Two">
+    <div class="Help" id="IDHelp" onclick="fHelp(1)">Помощь</div>
+  </div>
+  <div class="Cube Two" id="IDCube_2"></div>
+  <div class="TotalScore" id="IDTotalScore_2">Счёт: 0</div>
+  <div class="PlayerName">Игрок #2</div>
+</div>
+
+<div class="FinalContainer" id="IDFinalContainer">
+  <div class="Final" id="IDFinal">
+    <div class="GameOver">ИГРА ОКОНЧЕНА</div>
+    <div class="Score" id="IDScore">СЧЁТ: X / Y</div>
+    <div class="WinnerField">
+      <div class="Winner">Победил</div> 
+      <div id="IDWinnerName">Игрок #1</div>
+    </div>
+    <div class="GameOver" id="MoreGame">ЕЩЁ РАУНД?</div>
+  </div>
+</div>
+
+<div class="FinalContainer" id="IDHelpContainer">
+  <div class="Final" id="IDHelpMenu">
+    <div class="GameOver">ПОМОЩЬ</div>
+    <div class="Score" id="IDAboutTheGame">Об игре</div>
+    <div class="HelpText"><u>Версия игры</u>: 1.0.0</div>
+    <div class="HelpText"><u>Автор</u>: <b>AT_Sagor</b></div>
+    <div class="HelpText">Это игра в кубики от 1 до 6, идея которой взята из игры <b>Cult of the lamb</b>.</div> 
+    <div class="Score" id="IDRuleGame">Правила игры</div>
+    <div class="HelpText">За Игрока #1 играете Вы, за Игрока #2 играет ИИ.</div>
+    <div class="HelpText">У каждого игрока есть своё поле для кубиков, которое он бросает в начале хода. У Игрока #1 верхнее поле, у Игрока #2 нижнее поле.</div>
+    <div class="HelpText">Поле игрока поделено на три столбца, у которых есть свой счёт очков. Если в столбец поставить два одинаковых числа, то сумма очков от этих чисел удвоиться, если поставить три одинаковых числа, то соответственно утроится.</div>
+    <div class="HelpText">Общая сумма очков игрока складывается от суммы очков всех его столбцов.</div>
+    <div class="HelpText">Когда Вы или противник кладёт кубик с числом в ячейку, а в противоположном столбце есть кубик с таким же числом, то он уничтожается.</div>
+    <div class="HelpText">Когда все пустые ячейки у любого из игроков заканчиваются — игра заканчивается и побеждает тот, у кого больше очков.</div>
+    <div class="Score" id="IDHelpClose" onclick="fHelp(0)">Закрыть помощь</div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+  </body>
+</html>

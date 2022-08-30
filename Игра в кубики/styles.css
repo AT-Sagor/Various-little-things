@@ -1,0 +1,184 @@
+body {
+ display: flex;
+ justify-content: center;
+ flex-shrink: 0;
+ flex-basis: 0;
+ background: black;
+ color: orange;
+ user-select: none;
+}
+
+.MotherContainer {
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+ flex-shrink: 0;
+ flex-basis: 0;
+ max-width: 350px; max-height: 875px;
+ min-width: 315px; min-height: 787.5px;
+ border: 2px solid #ba9a27;
+}
+
+.PlayingField {
+ display: flex;
+ flex-shrink: 0;
+ flex-basis: 0;
+ flex-grow: 4;
+ outline: 2px solid #ba9a27;
+}
+
+.PointsField {
+ display: flex;
+ flex-direction: column;
+ flex-shrink: 0;
+ flex-basis: 0;
+ flex-grow: 2;
+}
+
+.Column {
+ display: flex;
+ flex-direction: column;
+ flex-grow: 1;
+ flex-shrink: 0;
+ flex-basis: 0;
+ outline: 1px solid #ba9a27;
+}
+
+.CubeField {
+ display: flex;
+ justify-content: center;
+ align-items: center; 
+ flex-grow: 1;
+ flex-shrink: 0;
+ flex-basis: 0;
+ outline: 1px solid #ba9a27;
+ Font-size: 5em;
+}
+
+.ScoreField {
+ display: flex;
+ flex-shrink: 0;
+ flex-basis: 0;
+ flex-grow: 1;
+}
+
+.ScoreColumnField {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-grow: 1;
+ flex-shrink: 0;
+ flex-basis: 0;
+ color: green;
+ Font-size: 3em;
+}
+
+.Player {
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ flex-grow: 1;
+ flex-shrink: 0;
+ flex-basis: 0;
+ Font-size: 3em;
+ text-align: center;
+}
+
+.Player.Two {
+ justify-content: flex-end;
+}
+
+.TotalScore {
+ margin: 0.25em;
+}
+
+.Cube {
+ margin: 1em 0 0 0;
+ border: 2px solid #ba9a27;
+ min-width: 1.25em; min-height: 1.25em;
+}
+
+.Cube.Two{
+ margin: 0 0 1em 0;
+}
+
+.AdditionalPanel {
+ display: flex;
+ flex-direction: column;
+ justify-content: flex-end;
+ flex-grow: 1;
+}
+
+.Start, .Help {
+ border: 2px solid #ba9a27;
+ padding: 0 0.25em 0 0.25em;
+ cursor: pointer;
+}
+
+.AdditionalPanel.Two {
+ justify-content: flex-start;
+}
+
+.FinalContainer {
+ display: none;
+ justify-content: center;
+ align-items: center;
+ position: absolute; 
+ width: 100%; height: 100%;
+ background: rgba(0, 0, 0, 0.9);
+ z-index: 99999;
+}
+
+.Final {
+ display: block;
+ position: absolute;
+ width: auto; height: auto;
+ max-width: 50%;
+ top: 25%;
+ background: black;
+ border: 2px solid #ba9a27;
+}
+
+.GameOver {
+ Font-size: 3em;
+ text-align: center;
+ border-bottom: 2px solid #ba9a27;
+ padding: 0.1em 0.25em 0.1em 0.25em;
+}
+
+.Score, #IDRuleGame {
+ border-bottom: 2px solid #ba9a27;
+}
+
+.WinnerField, .Score {
+ Font-size: 2em;
+ text-align: center;
+ padding: 0.25em;
+}
+
+#IDWinnerName {
+ padding: 0.5em 0 0 0;
+}
+
+#MoreGame, #IDHelpClose {
+ border-top: 2px solid #ba9a27;
+ border-bottom: none;
+ cursor: pointer;
+}
+
+#IDHelpContainer {
+  display: none;
+}
+
+#IDHelpMenu {
+ top: 10%;
+}
+
+.HelpText {
+  Font-size: 1em;
+  padding: 0.5em;
+}
+
+#IDRuleGame {
+ border-top: 2px solid #ba9a27; 
+}
