@@ -18,7 +18,6 @@ let iTotalScorePlayer_1; let iTotalScorePlayer_2;
 let oIDFinalContainer = document.getElementById('IDFinalContainer');
 let oIDHelpContainer = document.getElementById('IDHelpContainer');
 let oMoreGame = document.getElementById('MoreGame');
-//let oIDHelp = document.getElementById('IDHelp');
 
 //Создание интерфейса
 oMotherContainer.style.height = lWindowHeight*0.95+'px';
@@ -116,7 +115,6 @@ function fFieldSelection(iColumnNum) {
           oIDCube_1.innerHTML = '';          
           iNum.setAttribute("data-value", 1);
           fScore();
-          //setTimeout(fAI, 200);
           fAI();
         }
       }
@@ -132,10 +130,6 @@ function fFieldSelectionOut(iColumnNum) {
 //Подсчёт очков.
 function fScore() {
   let oScoreCube, oIDScoreColumnField, oCubeField;
-  //let iPersonalScore = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  //let iCubeDace = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-  //let iColumnScore = [0, 0, 0, 0, 0, 0];
-  //let iTotalScorePlayer_1, iTotalScorePlayer_2;
   let iFieldValidation_1, iFieldValidation_2;
   
   for (iCycle = 1; iCycle <= 18; iCycle++) {
@@ -147,11 +141,9 @@ function fScore() {
     iCubeDace[iCycle-1] = oScoreCube.value;    
   }
     
-    //console.log(iNum);
     fCubeDestruction();
     
     //Уничтожение кубиков из противоположного столбца.
-    //console.log(document.getElementById('IDCubeField_1').getAttribute("data-value"));
     function fCubeDestruction () {
     if (iStartPlayer == 0) {
       //Первый столбец
@@ -163,8 +155,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_10');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = '';        
         }
       }
       
@@ -175,8 +166,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_11');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = '';        
         }
       }
       
@@ -192,8 +182,6 @@ function fScore() {
         }
       }
       
-      //iFieldValidation_1.setAttribute("data-value", 0);
-      
       //Вторая ячейка
       if (iCubeDace[1] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_2');
@@ -203,7 +191,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -214,8 +201,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_11');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = '';   
         }
       }
       
@@ -240,7 +226,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -251,8 +236,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_11');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = '';  
         }
       }
       
@@ -277,8 +261,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_13');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = ''; 
         }
       }
       
@@ -290,7 +273,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -315,7 +297,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -326,8 +307,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_14');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = '';     
         }
       }
       
@@ -351,8 +331,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_13');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = ''; 
         }
       }
       
@@ -363,8 +342,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_14');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = ''; 
         }
       }
       
@@ -390,7 +368,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -401,8 +378,7 @@ function fScore() {
           oCubeField = document.getElementById('IDCubeField_17');
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
-          oCubeField.innerHTML = '';
-          
+          oCubeField.innerHTML = ''; 
         }
       }
       
@@ -427,7 +403,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -439,7 +414,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -464,7 +438,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -476,7 +449,6 @@ function fScore() {
           oCubeField.setAttribute("data-value", 0);
           oCubeField.value = 0;
           oCubeField.innerHTML = '';
-          
         }
       }
       
@@ -504,7 +476,6 @@ function fScore() {
       //Десятая ячейка
       if (iCubeDace[9] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_10');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[9] == iCubeDace[0] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_1');
@@ -540,7 +511,6 @@ function fScore() {
        //Одинадцатая ячейка
       if (iCubeDace[10] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_11');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[10] == iCubeDace[0] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_1');
@@ -576,7 +546,6 @@ function fScore() {
       //Двенадцатая ячейка
       if (iCubeDace[11] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_12');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[11] == iCubeDace[0] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_1');
@@ -613,7 +582,6 @@ function fScore() {
       //Тринадцатая ячейка
       if (iCubeDace[12] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_13');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[12] == iCubeDace[3] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_4');
@@ -649,7 +617,6 @@ function fScore() {
       //Четырнадцатая ячейка
       if (iCubeDace[13] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_14');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[13] == iCubeDace[3] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_4');
@@ -685,7 +652,6 @@ function fScore() {
       //Пятнадцатая ячейка
       if (iCubeDace[14] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_15');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[14] == iCubeDace[3] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_4');
@@ -722,7 +688,6 @@ function fScore() {
       //16-ая ячейка
       if (iCubeDace[15] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_16');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[15] == iCubeDace[6] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_7');
@@ -758,7 +723,6 @@ function fScore() {
      //17-ая ячейка
       if (iCubeDace[16] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_17');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[16] == iCubeDace[6] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_7');
@@ -794,7 +758,6 @@ function fScore() {
       //18-ая ячейка
        if (iCubeDace[17] != 0) {
         iFieldValidation_1 = document.getElementById('IDCubeField_18');
-        //console.log(iFieldValidation_1.getAttribute("data-value"));
         
         if (iCubeDace[17] == iCubeDace[6] && iFieldValidation_1.getAttribute("data-value") == "1") {
           oCubeField = document.getElementById('IDCubeField_7');
@@ -838,134 +801,100 @@ function fScore() {
   if (iStartPlayer == 1) {
     for (iValue = 1; iValue <= 9; iValue++) {
     iFieldValidation_2 = document.getElementById('IDCubeField_'+iValue+'').setAttribute("data-value", 0);
-  }
+    }
   }
     
     
     //Удвояния и утроения очков.   
-   if (iPersonalScore[0] == iPersonalScore[1] && iPersonalScore[0] == iPersonalScore[2]) {
-    
+   if (iPersonalScore[0] == iPersonalScore[1] && iPersonalScore[0] == iPersonalScore[2]) { 
       iPersonalScore[0] = iPersonalScore[0]*3;
       iPersonalScore[1] = iPersonalScore[1]*3;
-      iPersonalScore[2] = iPersonalScore[2]*3;
-    
+      iPersonalScore[2] = iPersonalScore[2]*3;  
   }
    
    else if (iPersonalScore[0] == iPersonalScore[1]) {
-    
       iPersonalScore[0] = iPersonalScore[0]*2;
-      iPersonalScore[1] = iPersonalScore[1]*2;
-    
+      iPersonalScore[1] = iPersonalScore[1]*2; 
   }
     
    else if (iPersonalScore[0] == iPersonalScore[2]) {
-    
       iPersonalScore[0] = iPersonalScore[0]*2;
       iPersonalScore[2] = iPersonalScore[2]*2;
-    
   }
     
    else if (iPersonalScore[1] == iPersonalScore[2]) {
-    
       iPersonalScore[1] = iPersonalScore[1]*2;
       iPersonalScore[2] = iPersonalScore[2]*2;
-    
   }
     
    if (iPersonalScore[3] == iPersonalScore[4] && iPersonalScore[3] == iPersonalScore[5]) {
-    
       iPersonalScore[3] = iPersonalScore[3]*3;
       iPersonalScore[4] = iPersonalScore[4]*3;
       iPersonalScore[5] = iPersonalScore[5]*3;
-    
   }
     
    else if (iPersonalScore[3] == iPersonalScore[4]) {
-    
       iPersonalScore[3] = iPersonalScore[3]*2;
       iPersonalScore[4] = iPersonalScore[4]*2;
-    
   }
     
    else if (iPersonalScore[3] == iPersonalScore[5]) {
-    
       iPersonalScore[3] = iPersonalScore[3]*2;
-      iPersonalScore[5] = iPersonalScore[5]*2;
-    
+      iPersonalScore[5] = iPersonalScore[5]*2; 
   }
     
    else if (iPersonalScore[4] == iPersonalScore[5]) {
-    
       iPersonalScore[4] = iPersonalScore[4]*2;
       iPersonalScore[5] = iPersonalScore[5]*2;
-    
   }
     
     
    if (iPersonalScore[6] == iPersonalScore[7] && iPersonalScore[6] == iPersonalScore[8]) {
-    
       iPersonalScore[6] = iPersonalScore[6]*3;
       iPersonalScore[7] = iPersonalScore[7]*3;
       iPersonalScore[8] = iPersonalScore[8]*3;
-    
   }
     
    else if (iPersonalScore[6] == iPersonalScore[7]) {
-    
       iPersonalScore[6] = iPersonalScore[6]*2;
       iPersonalScore[7] = iPersonalScore[7]*2;
-    
   }
     
    else if (iPersonalScore[6] == iPersonalScore[8]) {
-    
       iPersonalScore[6] = iPersonalScore[8]*2;
       iPersonalScore[8] = iPersonalScore[8]*2;
-    
   }
     
    else if (iPersonalScore[7] == iPersonalScore[8]) {
-    
       iPersonalScore[7] = iPersonalScore[7]*2;
       iPersonalScore[8] = iPersonalScore[8]*2;
-    
   }
     
 if (iPersonalScore[6+3] == iPersonalScore[7+3] && iPersonalScore[6+3] == iPersonalScore[8+3]) {
-    
       iPersonalScore[6+3] = iPersonalScore[6+3]*3;
       iPersonalScore[7+3] = iPersonalScore[7+3]*3;
       iPersonalScore[8+3] = iPersonalScore[8+3]*3;
-    
   }
     
    else if (iPersonalScore[6+3] == iPersonalScore[7+3]) {
-    
       iPersonalScore[6+3] = iPersonalScore[6+3]*2;
       iPersonalScore[7+3] = iPersonalScore[7+3]*2;
-    
   }
     
    else if (iPersonalScore[6+3] == iPersonalScore[8+3]) {
-    
       iPersonalScore[6+3] = iPersonalScore[8+3]*2;
       iPersonalScore[8+3] = iPersonalScore[8+3]*2;
-    
   }
     
    else if (iPersonalScore[7+3] == iPersonalScore[8+3]) {
-    
       iPersonalScore[7+3] = iPersonalScore[7+3]*2;
-      iPersonalScore[8+3] = iPersonalScore[8+3]*2;
-    
+      iPersonalScore[8+3] = iPersonalScore[8+3]*2;  
   }
     
 if (iPersonalScore[6+6] == iPersonalScore[7+6] && iPersonalScore[6+6] == iPersonalScore[8+6]) {
-    
       iPersonalScore[6+6] = iPersonalScore[6+6]*3;
       iPersonalScore[7+6] = iPersonalScore[7+6]*3;
       iPersonalScore[8+6] = iPersonalScore[8+6]*3;
-    
   }
     
    else if (iPersonalScore[6+6] == iPersonalScore[7+6]) {  
@@ -974,39 +903,29 @@ if (iPersonalScore[6+6] == iPersonalScore[7+6] && iPersonalScore[6+6] == iPerson
   }
     
    else if (iPersonalScore[6+6] == iPersonalScore[8+6]) {
-    
       iPersonalScore[6+6] = iPersonalScore[8+6]*2;
       iPersonalScore[8+6] = iPersonalScore[8+6]*2;
-    
   }
     
    else if (iPersonalScore[7+6] == iPersonalScore[8+6]) {
-    
       iPersonalScore[7+6] = iPersonalScore[7+6]*2;
       iPersonalScore[8+6] = iPersonalScore[8+6]*2;
-    
   }
     
-if (iPersonalScore[6+9] == iPersonalScore[7+9] && iPersonalScore[6+9] == iPersonalScore[8+9]) {
-    
+if (iPersonalScore[6+9] == iPersonalScore[7+9] && iPersonalScore[6+9] == iPersonalScore[8+9]) { 
       iPersonalScore[6+9] = iPersonalScore[6+9]*3;
       iPersonalScore[7+9] = iPersonalScore[7+9]*3;
       iPersonalScore[8+9] = iPersonalScore[8+9]*3;
-    
   }
     
    else if (iPersonalScore[6+9] == iPersonalScore[7+9]) {
-    
       iPersonalScore[6+9] = iPersonalScore[6+9]*2;
-      iPersonalScore[7+9] = iPersonalScore[7+9]*2;
-    
+      iPersonalScore[7+9] = iPersonalScore[7+9]*2; 
   }
     
    else if (iPersonalScore[6+9] == iPersonalScore[8+9]) {
-    
       iPersonalScore[6+9] = iPersonalScore[8+9]*2;
-      iPersonalScore[8+9] = iPersonalScore[8+9]*2;
-    
+      iPersonalScore[8+9] = iPersonalScore[8+9]*2; 
   }
     
    else if (iPersonalScore[7+9] == iPersonalScore[8+9]) {
@@ -1062,7 +981,6 @@ function fAI() {
   function fBust(){
   if (oIDCubeFieldAI.value > 0) {
     for (iStep = 1; iStep <= 9; iStep++) {
-      //if (iStep == 9) { fFinal(2); }
       iAIField++
       if (iAIField == 19) { iAIField = 10; }
       oIDCubeFieldAI = document.getElementById('IDCubeField_'+iAIField+'');
@@ -1094,26 +1012,19 @@ function fFinal (sWinner) {
   oIDScore.innerHTML = 'СЧЁТ: '+oIDTotalScore_1.value+' / '+oIDTotalScore_2.value+'';
 
   if (iTotalScorePlayer_1 > iTotalScorePlayer_2) {
-    oIDWinnerName.innerHTML = 'Игрок #1';
-    //alert('Победил игрок #1'); 
+    oIDWinnerName.innerHTML = 'Игрок #1'; 
  }
   
   if (iTotalScorePlayer_1 < iTotalScorePlayer_2) {
-    //alert('Победил игрок #2');
     oIDWinnerName.innerHTML = 'Игрок #2';
  }
   
   if (iTotalScorePlayer_1 == iTotalScorePlayer_2) {
-    //alert('Ничья!');
     oIDWinnerName.innerHTML = 'Ничья!';
   } 
 }
 
 function fHelp(iState) {
-  //oIDHelpContainer.style.display = 'flex';
-  
   if (iState == 0) { oIDHelpContainer.style.display = 'none'; }
   if (iState == 1) { oIDHelpContainer.style.display = 'flex'; }
-   
-  console.log(oIDHelpContainer.style.display);
 }
