@@ -1,0 +1,21 @@
+#IDImage {
+    display: inline-block;
+    min-width: 25em;
+    min-height: 25em;
+    background: silver;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input[type=file] {
+    display: none;
+}
+
+.ImageButton {
+    display: inline-block;
+    padding: 0.5em;
+    background: silver;
+    border: 2px solid black;
+    cursor: pointer;
+}
